@@ -9,7 +9,7 @@
 #define RED_MIN 170
 #define BLUE_MAX 165
 #define BLUE_MIN 150
-#define GREEN_MAX 129
+#define GREEN_MAX 124
 #define GREEN_MIN 97
 
 enum
