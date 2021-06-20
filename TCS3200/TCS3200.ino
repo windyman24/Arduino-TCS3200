@@ -92,16 +92,17 @@ void setup() {
   pinMode(TCS3200_S1,OUTPUT);
   pinMode(TCS3200_S2,OUTPUT);
   pinMode(TCS3200_S3,OUTPUT);
+  digitalWrite(TCS3200_OE,LOW);
   Serial.begin(9600);
   setDetermine(CLEAR);
   SetFreqSCALING(2);
 }
 
 void loop() {
-  long freq = pulseIn(TCS3200_OUT,LOW);
-  Serial.println(freq);
-//  if(IsColor(RED))Serial.println("isRed");
-//  else if(IsColor(BLUE))Serial.println("isBlue");
-//  else if(IsColor(GREEN))Serial.println("isGreen");
+//  long freq = pulseIn(TCS3200_OUT,LOW);
+//  Serial.println(freq);
+  if(IsColor(RED))Serial.println("isRed");
+  else if(IsColor(BLUE))Serial.println("isBlue");
+  else if(IsColor(GREEN))Serial.println("isGreen");
   delay(1000);
 }
